@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP verification</title>
+    <style>
+        body {
+            /* margin: 0;
+            padding: 0; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(https://img.freepik.com/premium-vector/otp-onetime-password-2step-authentication-data-protection-internet-security-concept_100456-10200.jpg?semt=ais_hybrid);
+            background-repeat: no-repeat;
+        }
+        .OTP-container{
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow:0 4px 8px green;
+            width: 300px;
+            text-align: center;
+            justify-content: right;
+            align-items: right;
+            flex-direction:row-reverse;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <h3>{{ message }}</h3>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="OTP-container">
+        <form  method="POST">
+            <h1>OTP verification</h1>
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter here" required/>
+                <button type="submit" class="btn">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>

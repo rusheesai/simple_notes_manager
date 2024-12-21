@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple notes manager</title>
+    <style>
+        body{
+            background: url('https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?cs=srgb&dl=pexels-minan1398-1629212.jpg&fm=jpg');
+            background-size: cover;
+        }
+        .title{
+            background-color: palegreen;
+            display: flex;
+            justify-content: center;
+            border-radius: 40%;
+            border-width: 100%;
+        }
+        .one{
+            display: flex;
+            justify-content: center;
+        }
+        .create-button{
+            padding: 1%;
+        }
+        .login-button{
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Welcome to Notes manager</h1>
+    <div class="one">
+        <a href="{{url_for('create')}}"><button class="create-button">Create</button></a>
+        <a href="{{url_for('login')}}"><button class="login-button">login</button></a>
+    </div>
+</body>
+</html>

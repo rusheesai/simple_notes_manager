@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot password</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(https://t4.ftcdn.net/jpg/01/65/01/77/360_F_165017799_byNziC85xNVTe02EYwwnl9LaAgctQPFr.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+        }
+        .forgot-container {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px yellow;
+            width: 300px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn {
+            padding: 10px;
+            border: none;
+            background-color:brown;
+            color: white;
+            border-radius: 100px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-container">
+        <form action="/forgotpassword" method="post">
+            <h1>Forgot Password</h1>
+                <label for="password">Enter email:</label>
+                <input type="text" id="email" name="forgotpassword" placeholder="Enter here" required/>
+                <button type="submit" class="btn">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
